@@ -3,9 +3,11 @@ const DisplayEntries = (props) => {
         <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Post</th>
-            <th>Date</th>
+          <header>
+            <h1>SocialFeed</h1>
+          </header>
+            
+            
           </tr>     
         </thead>
         <tbody>

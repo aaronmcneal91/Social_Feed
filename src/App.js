@@ -4,10 +4,10 @@ import AddEntryForm from './Components/AddEntry/AddEntryform';
 
 function App() {
 
-const[entries, setEntries] = useState([{name: 'NAME', post:'POST'}])
+const[entries, setEntries] = useState([{}])
 
 function addNewEntry(entry){
-  let tempEntries = [...entries,];
+  let tempEntries = [...entries, entry];
   setEntries(tempEntries);
 }
 
