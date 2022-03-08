@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
+import AddEntryForm from './Components/AddEntry/AddEntryform';
 
 function App() {
+
+const[entries, setEntries] = useState([{name: 'NAME', post:'POST'}])
+
+function addNewEntry(entry){
+  let tempEntries = [...entries,];
+  setEntries(tempEntries);
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <DisplayEntries parentEntries ={entries}/>
+    <AddEntryForm addNewEntryProperty={addNewEntry}/>
+
     </div>
   );
 }
 
 export default App;
+
