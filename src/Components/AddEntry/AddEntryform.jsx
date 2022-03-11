@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import './AddEntry.css';
+
+
+
+
 
 
 
@@ -22,15 +27,25 @@ const AddEntryForm = (props) => {
     }
 
     return ( 
-        <form onSubmit={handleSubmit}>
-            <label for="fname">Name</label>
-            <input type ='text' id='fname' onChange={(event) => setName (event.target.value)}  /><br></br>
-            {/* <label>Post</label>
-            <textarea></textarea><br></br> */}
-            <label>Post</label>
-            <input value={post}  onChange={(event) =>setPost(event.target.value)}  /> <br></br>
-            <button type='submit'>CREATE</button>
-        
+        <form onSubmit={handleSubmit} className ='form-grid'>
+        <form onSubmit={handleSubmit} className= 'container'>
+            <div className = 'post'>
+
+                <label for="fname">Name</label>
+                <input type ='text' id='fname' placeholder = "What is your name?"  onChange={(event) => setName (event.target.value)}  /><br></br>
+                <label>Post</label>
+                <input for = 'Post' placeholder = 'What are your thoughts?' value={post}  onChange={(event) =>setPost(event.target.value)}  /> <br></br>
+                
+                <div className=' like'>
+                    <button type= 'like'>Like</button>
+                </div>
+                <div className=' disike'>
+                    <button type= 'Dislike'>Disike</button>
+                </div>
+                <button type='submit'>CREATE</button>
+            </div>
+
+        </form> 
         </form>
 
      );

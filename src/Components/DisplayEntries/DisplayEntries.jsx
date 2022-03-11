@@ -19,6 +19,8 @@ const DisplayEntries = (props) => {
               <td>{entry.post}</td>
               <td>{entry.date}</td>
 
+                
+
             </tr>
           );
         })} 

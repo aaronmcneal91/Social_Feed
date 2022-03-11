@@ -1,0 +1,38 @@
+
+
+.post{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.like{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+.like:hover{
+    box-shadow: 0 12px 16px 0 ;
+    color: blue;
+       
+}
+.active{
+    background-color: white;
+}
+
+.inactive{
+    background-color: dimgrey;
+}
+.dislike{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    
+}
+.dislike:hover{
+    box-shadow: 0 12px 16px 0;
+    background-color: red;
+}
+
+
